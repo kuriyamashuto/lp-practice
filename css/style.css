@@ -21,7 +21,7 @@
 header {
     background-color: #fff;
 }
-header img {
+header i {
     padding: 15px 0;
     color: #777;
 }
@@ -163,14 +163,14 @@ nav{
     display: flex;
     justify-content: center;
 }
-.sns img{
+.sns i{
     font-size: 40px;
     overflow: hidden;
     color: #8c8c8c;
     max-width: 185px;
     padding: 25px 50px 25px 50px;
 }
-nav img:hover{
+nav i:hover{
     color: #fff;
     transition: .5s;
 }
