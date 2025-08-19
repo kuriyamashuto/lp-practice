@@ -36,6 +36,9 @@ header button:hover{
     color: #333;
     transition: .3s;
 }
+.hamburger {
+    display: none;
+}
 
 /*キービジュアル*/
 .keyvisual{
@@ -71,11 +74,6 @@ header button:hover{
 .newsimg{
     width: 250px;
 }
-.newstext{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
 .newstext h2{
     font-size: 40px;
     letter-spacing: 10px;
@@ -96,9 +94,6 @@ header button:hover{
     font-size: 40px;
     letter-spacing: 10px;
     padding: 20px 0 35px 0;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 .skillsflex{
     display: grid;
@@ -184,4 +179,109 @@ footer div{
     letter-spacing: 5px;
     padding: 25px;
     text-align: right;
+}
+
+/*タブレット*/
+@media (max-width: 1199px){
+    .keyvisualtext{
+        padding: 250px 0;
+    }
+    .news{
+        padding: 50px 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .newsimg,.newstext{
+        width: 100%;
+        text-align: center;
+    }
+    .skillsflex{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .skills img {
+        padding: 0 0 100px 0; 
+    }
+    .skills img:nth-child(3) {
+        margin-bottom: 80px;
+    }
+    .skills img:nth-child(7),
+    .skills img:nth-child(11) {
+        margin-bottom: 80px;
+    }
+}
+
+/*スマホ*/
+@media(max-width: 767px) {
+    header button {
+        display: none;
+    }
+    header .hamburger {
+        display: block;
+        width: 30px;
+        height: 22px;
+        position: relative;
+        cursor: pointer;
+    }
+    header .hamburger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #6ba7eb;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    header .hamburger span:nth-child(1) { top: 0; }
+    header .hamburger span:nth-child(2) { top: 9px; }
+    header .hamburger span:nth-child(3) { top: 18px; }
+    .keyvisualtext {
+        padding: 200px 0;
+    }
+    .keyvisualtext h1 {
+        font-size: 40px;
+    }
+    .keyvisualtext p {
+        font-size: 30px;
+    }
+    .news {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .newsimg,.newstext {
+        width: 100%; 
+        text-align: center; 
+    }
+    .skillsflex {
+        grid-template-columns: 1fr; 
+        justify-items: center; 
+    }
+    .skills img {
+        padding: 0 0 100px 0; 
+    }
+    .skills img:nth-child(3) {
+        margin-bottom: 80px;
+    }
+    .skills img:nth-child(7),
+    .skills img:nth-child(11) {
+        margin-bottom: 80px;
+    }
+    .plantable th {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .plantable td {
+        font-size: 12px;
+    }
+    nav {
+        padding: 50px 0; 
+    }
+    .sns i {
+        padding: 50px 15px;
+        width: 100%; 
+        box-sizing: border-box;
+        margin:0 auto;
+    }
 }
