@@ -71,6 +71,10 @@ header button:hover{
     align-items: flex-start;
     gap: 50px;
 }
+.news .inner{
+    display: flex;
+    text-align: center;
+}
 .newsimg{
     width: 250px;
 }
@@ -184,10 +188,15 @@ footer div{
 
 /*タブレット*/
 @media (max-width: 1199px){
+    .inner {
+    width: 100%;
+    max-width: 97%;
+    margin: 0 auto;
+    }
     .keyvisualtext{
         padding: 250px 0;
     }
-    .news{
+    .news .inner{
         padding: 50px 0;
         flex-direction: column;
         align-items: center;
@@ -212,6 +221,11 @@ footer div{
 
 /*スマホ*/
 @media(max-width: 767px) {
+    .inner {
+    width: 100%;
+    max-width: 98%;
+    margin: 0 auto;
+    }
     header button {
         display: none;
     }
@@ -243,7 +257,7 @@ footer div{
     .keyvisualtext p {
         font-size: 30px;
     }
-    .news {
+    .news .inner{
         flex-direction: column;
         align-items: center;
         justify-content: center;
